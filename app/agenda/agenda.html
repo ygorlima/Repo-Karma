@@ -1,0 +1,19 @@
+<html ng-app="app">
+  <head><link href="css/default.css" type="text/css"></head>
+  <body>
+    <div ng-controller="ContatoCtrl">
+      <a href="#/new">{{frm.new}}</a>
+      <br />
+      <h2> {{frm.title2}}</h2>
+      Find: <input type="text" ng-model="nome" />
+      <ul class="table"> 
+          <li ng-repeat="contato in getContatos() | filter:nome | orderBy:'nome'">
+            <span>{{contato.nome}} </span> 
+            <span> {{contato.telefone}} </span>
+            <span><a href="#/edit/{{contato.id}}">{{frm.edit}}</a></span>
+            <span><a href="#" ng-click="delete($index)">{{frm.remove}}</a></span>
+          </li>
+      </ul>
+    </div>
+  </body>
+</html>

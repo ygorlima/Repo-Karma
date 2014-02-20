@@ -1,0 +1,21 @@
+<html ng-app="app">
+  <head>
+  </head>
+  <body>
+    <div>
+        <a href="#/">Home</a>
+        <h2> {{frm.newContato}}</h2>
+        <form name="formNewContact">
+            &nbsp;&nbsp;&nbsp;
+            Nome: <input type="text" ng-model="contato.nome" required > 
+            <br />
+            Telefone: <input type="text" ng-model="contato.telefone" mask="'(999).999-99'" placeholder="(___).___-__" ng-required="true" required >
+            <button ng-click="save()" ng-disabled="formNewContact.$invalid">
+              <span ng-controller="ContatoCtrl">
+                {{frm.save}}
+              </span>
+            </button>      
+        </form>
+    </div>
+</body>
+</html>

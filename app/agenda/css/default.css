@@ -1,0 +1,12 @@
+ul.table {
+  display: table;
+}
+li.ng-scope {
+  display: table-row;
+}
+li.ng-scope span {
+  display: table-cell !important;
+  list-style:none;
+  border: 1px solid #ddd;
+  padding: 2px 6px;
+}
